@@ -1,1 +1,19 @@
+# For Performance
+debug.performance.tuning=1
+persist.sys.use_dithering=0
+ro.fb.mode=1
+sys.use_fifo_ui=1
+ro.config.enable.hw_accel=true
+ro.config.sf.compbypass.enable=0
 
+# For Ram & Vm
+ro.vendor.qti.config.zram=true
+dalvick.vm.heapsize=512m
+
+# For Touch
+view.touch_slop=1
+view.scroll_friction=0
+ro.max.fling_velocity=20000
+ro.min.fling_velocity=8000
+debug.egl.hw=1
+video.accelerate.hw=1
