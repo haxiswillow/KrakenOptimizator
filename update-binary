@@ -1,0 +1,25 @@
+#/sbin/sh
+
+umask 022
+
+rm -rf $TMPDIR 2>/dev/null
+ui_print () { echo "$1"; }
+
+requiere_new_magisk () {
+  ui_print "_______________________________"
+  ui_print "Requires Recent Magisk!
+  ui_print "_______________________________"
+  exit 1
+}
+
+OUTFD=$2
+ZIPFILE=$3
+
+mount /data/ 2>/dev/null
+
+[ -f /data/adb/magisk/util_functions.sh ] || requiere_new_magisk
+. /data/adb/magisk/util_functions.sh
+[ $MAGISK_VER_CODE -lt 20400 ] && requiere_new_magisk
+
+install_module
+exit 0
