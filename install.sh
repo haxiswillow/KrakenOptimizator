@@ -4,23 +4,23 @@ POSTFSDATA=true
 LATESTARSERVICE=true
 
 print_modname() {
-ui_print "Kraken Optimizator 1.0.0"
+ui_print "- Kraken Optimizator 1.0.0"
 sleep 1
-ui_print "Updated 20/03/21"
+ui_print "- Updated 20/03/21"
 sleep 1
-ui_print "Dev Maintainer : Haxis"
+ui_print "- Dev Maintainer : Haxis"
 sleep 1
 ui_print "_________________________"
 sleep 1
-ui_print "Date:$(date +"%d-%m_%y %r")"
+ui_print "- Date:$(date +"%d-%m_%y %r")"
 sleep 1
-ui_print "Cleaning..."
+ui_print "- Cleaning..."
 sleep 1
 fstrim -v /data
 fstrim -v /cache
 fstrim -v /system
 sleep 1
-ui_print "Installing..."
+ui_print "- Installing..."
 }
 
 on_install() {
