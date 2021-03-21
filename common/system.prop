@@ -9,6 +9,7 @@ ro.config.sf.compbypass.enable=0
 # For Ram & Vm
 ro.vendor.qti.config.zram=true
 dalvick.vm.heapsize=512m
+ro.config.low_ram=false
 
 # For Touch
 view.touch_slop=1
@@ -23,3 +24,7 @@ ro.product.brand=samsung
 ro.product.name=
 ro.product.system.model=G988N
 ro.product.model=SM-G988N
+
+# Hw
+hw2d.force=1
+hw3d.force=1
