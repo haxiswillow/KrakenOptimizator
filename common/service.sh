@@ -27,6 +27,21 @@ write "${zram0}reset" "1"
 write "${zram0}disksize" "1677721600"
 done
 
-# Cpu Input Boost
+# Cpu Boost
 echo "90" /sys/module/cpu_input_boost/parameters/input_boost_duration
 echo "1" /sys/module/cpu_input_boost/parameters/dynamic_stune_boost
+
+chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+echo "performance" /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+chmod 0644 /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor
+echo "performance" /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor
+chmod 0644 /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor
+echo "performance" /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor
+chmod 0644 /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor
+echo "performance" /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor
+
+# For Battery
+echo "0" /sys/touchpanel/double_tap
+echo "Y" /sys/module/worqueue/parameters/power_efficient
+
+exit 0;
