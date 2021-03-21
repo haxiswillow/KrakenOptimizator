@@ -4,9 +4,9 @@ POSTFSDATA=true
 LATESTARSERVICE=true
 
 print_modname() {
-ui_print "- Kraken Optimizator 1.0.0"
+ui_print "- Kraken Optimizator 1.0.1"
 sleep 1
-ui_print "- Updated 20/03/21"
+ui_print "- Updated 21/03/21"
 sleep 1
 ui_print "- Dev Maintainer : Haxis"
 sleep 1
