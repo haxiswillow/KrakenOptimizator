@@ -1,0 +1,4 @@
+#!/system/bin/sh
+# Written By Haxis
+
+write /proc/sys/vm/swappiness 100
