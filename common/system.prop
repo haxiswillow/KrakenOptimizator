@@ -36,6 +36,7 @@ hw3d.force=1
 persist.sys.ui.hw=1
 force_hw_ui=true
 debug.kill_allocating_task=0
+debug.hwui.renderer=vulkan
 
 #HW 3D Perfomance
 ro.secure=0
