@@ -1,0 +1,57 @@
+#!/system/bin/sh
+
+x="krakenmenu"
+menu ()
+{
+while true $x != "krakenmenu"
+do
+clear
+echo "================================================"
+echo "Kraken Menu"
+echo "Criado por : Haxis"
+echo ""
+echo "1) Otimizar Dispositivo"
+echo ""
+echo "2) Limpar o Cache"
+echo ""
+echo "3) Sair do menu"
+echo "================================================"
+case "$x" in
+
+
+    1)
+      echo "Aguarde ..."
+      echo "3" > /proc/sys/vm/drop_caches
+      sleep 1
+
+echo "================================================"
+;;
+    2)
+      echo "Aguarde..."
+      rm /data/cache/*
+      rm /data/local/*.apk
+      rm /cache/*
+      rm /data/log/*.log
+      rm /data/local/tmp/*.apk
+      rm /cache/recovery/*
+      rm /data/*.log
+      rm /data/backup/pending/*.tmp
+      rm /data/tombstones/*
+      rm /sdcard/LOST.DIR/*
+      sleep 5
+echo "================================================"
+;;
+   3)
+      echo "saindo..."
+      sleep 5
+      clear;
+      exit;
+echo "================================================"
+;;
+
+*)
+      echo "opção invalida !"
+esac
+done
+}
+menu
