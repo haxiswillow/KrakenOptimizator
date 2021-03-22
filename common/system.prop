@@ -5,11 +5,13 @@ ro.fb.mode=1
 sys.use_fifo_ui=1
 ro.config.enable.hw_accel=true
 ro.config.sf.compbypass.enable=0
+persist.sys.NV_FPSLIMIT=60
 
 # For Ram & Vm
 ro.vendor.qti.config.zram=true
 dalvick.vm.heapsize=512m
 ro.config.low_ram=false
+persist.sys.purgeable_assets=1
 
 # For Touch
 view.touch_slop=1
@@ -18,6 +20,9 @@ ro.max.fling_velocity=20000
 ro.min.fling_velocity=8000
 debug.egl.hw=1
 video.accelerate.hw=1
+touch.pressure.scale=0.1
+persist.sys.scrollingcache=3
+ro.securestorage.knox=false
 
 # Emulate
 ro.product.brand=samsung
@@ -28,3 +33,31 @@ ro.product.model=SM-G988N
 # Hw
 hw2d.force=1
 hw3d.force=1
+persist.sys.ui.hw=1
+force_hw_ui=true
+debug.kill_allocating_task=0
+debug.hwui.renderer=vulkan
+
+#HW 3D Perfomance
+ro.secure=0
+ro.product.gpu.driver=1
+persist.sampling_profiler=0
+hwui.render_dirty_regions=false
+persist.sampling_profiler=0
+ro.config.disable.hw_accel=false
+debug.egl.profiler=1
+debug.egl.hw=1
+ro.vold.umsdirtyratio=20
+hwui.disable_vsync=true
+
+# Increase some Performance
+ro.product.gpu.driver=1
+ENFORCE_PROCESS_LIMIT=false
+
+# Game tweaks
+persist.sys.NV_FPSLIMIT=60
+persist.sys.NV_POWERMODE=1
+persist.sys.NV_PROFVER=15
+persist.sys.NV_STEREOCTRL=1
+persist.sys.NV_STEREOSEPCHG=0
+persist.sys.NV_STEREOSEP=20
