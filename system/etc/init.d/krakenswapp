@@ -2,3 +2,5 @@
 # Written By Haxis
 
 write /proc/sys/vm/swappiness 100
+
+exit 0;
